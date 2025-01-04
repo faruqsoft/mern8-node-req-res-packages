@@ -50,4 +50,17 @@ server.listen(3000, ()=>{
     console.log("Server started on port at http://localhost:3000");
 });
 
- */
+*/
+
+const http = require('http');
+const server =  http.createServer((req, res) => {
+    res.statusCode = 200;//status code apply
+    res.setHeader("MERN-BATCH", " EIGHT");//response send by headers
+    res.end('helo');
+})
+
+
+
+server.listen( 4000, ()=>{
+    console.log( `Server started on port at http://localhost:4000` );
+})
